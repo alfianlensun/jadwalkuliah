@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('<?= base_url() ?>/assets/signinvendor/images/bg-01.jpeg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form method="post" action="<?= base_url('/C_Auth/login') ?>" class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
@@ -43,7 +43,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						<span class="focus-input100" gdata-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
