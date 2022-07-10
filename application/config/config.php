@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/jadwalkuliah';
+// $config['base_url'] = 'http://localhost:8087';
 
 /*
 |--------------------------------------------------------------------------

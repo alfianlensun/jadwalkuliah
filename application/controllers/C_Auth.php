@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class SignIn extends CI_Controller {
+class C_Auth extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,4 +22,8 @@ class SignIn extends CI_Controller {
 	{
 		$this->load->view('signin');
 	}
+
+    public function login(){
+        dd($this->input->post());
+    }
 }
