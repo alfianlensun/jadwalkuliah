@@ -100,6 +100,7 @@
                                     <td>Jam Mulai</td>
                                     <td>Jam Selesai</td>
                                     <td>Nama Dosen</td>
+                                    <td>Semester</td>
                                     <td>Nama Kelas</td>
                                     <td>Nama Mata Kuliah</td>
                                     <td>Opsi</td>
@@ -127,6 +128,9 @@
                                         </td>
                                         <td>
                                             <?= $l['nm_mst_dosen'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $l['nm_mst_semester'] ?>
                                         </td>
                                         <td>
                                             <?= $l['nm_mst_kelas'] ?>
