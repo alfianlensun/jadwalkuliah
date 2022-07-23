@@ -1,3 +1,6 @@
+<?php
+    $dow = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+?>
 <style>
     .form-control{
         color: #000 !important;     
@@ -14,8 +17,12 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="">Tanggal</label>
-                                <input type="date" value="<?= date('Y-m-d') ?>" class="form-control" placeholder="Tanggal" name="tanggal">
+                                <label for="">Hari</label>
+                                <select class="form-control" placeholder="dow" name="dow">
+                                    <?php foreach ($dow as $key => $d): ?>
+                                        <option value="<?= $key ?>"><?= $d ?></option>
+                                    <?php endforeach ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-4">
@@ -54,6 +61,17 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
+                                <label for="">Semester</label>
+                                <select name="id_mst_semester" id="id_mst_semester" class="form-control" required>
+                                    <option value="" selected disabled>Pilih kelas</option>
+                                    <?php foreach ($semester as $s): ?>
+                                        <option value="<?= $s['id_mst_semester'] ?>"><?= $s['nm_mst_semester'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
                                 <label for="">Mata Kuliah</label>
                                 <select name="id_mst_mata_kuliah" id="id_mst_mata_kuliah" class="form-control" required>
                                     <option value="" selected disabled>Pilih Mata Kuliah</option>
@@ -78,7 +96,7 @@
                             <thead>
                                 <tr>
                                     <td>No</td>
-                                    <td>Tanggal</td>
+                                    <td>Hari</td>
                                     <td>Jam Mulai</td>
                                     <td>Jam Selesai</td>
                                     <td>Nama Dosen</td>
@@ -99,7 +117,7 @@
                                             <?= $key+1 ?>
                                         </td>
                                         <td>
-                                            <?= $l['tanggal'] ?>
+                                            <?= $l['dow_string'] ?>
                                         </td>
                                         <td>
                                             <?= $l['jam_mulai'] ?>

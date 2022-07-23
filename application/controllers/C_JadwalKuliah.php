@@ -6,12 +6,14 @@ class C_JadwalKuliah extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('M_JadwalKuliah', 'jadwal');
+        $this->load->model('M_MasterSemester', 'semester');
         $this->load->model('M_MasterKelas', 'kelas');
         $this->load->model('M_MasterDosen', 'dosen');
         $this->load->model('M_MasterMataKuliah', 'mk');
     }
 	public function index(){
         $data['list'] = $this->jadwal->get();
+        $data['semester'] = $this->semester->get();
         $data['kelas'] = $this->kelas->get();
         $data['dosen'] = $this->dosen->get();
         $data['mk'] = $this->mk->get();

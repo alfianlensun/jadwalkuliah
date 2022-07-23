@@ -17,7 +17,10 @@ class M_JadwalKuliah extends CI_Model
     }
 
     public function create(){
-         $this->db->insert('trx_jadwal_kuliah', $this->input->post());
+        $dow = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+        $datapost = $this->input->post();
+        $datapost['dow_string'] = $dow[$datapost['dow']];
+         $this->db->insert('trx_jadwal_kuliah', $datapost);
          return $this->db->insert_id();
     }
 
