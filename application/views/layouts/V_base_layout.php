@@ -227,7 +227,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/C_MainMenu') ?>">
                     <i class="mdi mdi-grid-large menu-icon"></i>
-                        <span class="menu-title">Speaking</span>
+                        <span class="menu-title">Menu Utama</span>
                     </a>
                 </li>
                 <li class="nav-item">

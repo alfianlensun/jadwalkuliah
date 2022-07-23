@@ -2,15 +2,13 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-body">
-            <div class="row" id="wrappervoice" style="position: relative;">
-                <div class="col-12 d-flex justify-content-center">
-                    <img src="<?= base_url('/assets/sound.gif') ?>" alt="this slowpoke moves"  style="width: 200px;"/>
-                </div>
+            <div class="col-lg-12">
+                Selamat Datang Di Admin Page
             </div>
         </div>
     </div>
 </div>
-
+<!-- 
 <script>
     window.historyspeak = [];
     window.speak = [];
@@ -18,7 +16,7 @@
     function render(){
         $("#wrappervoice").html(`
             <div class="col-12 d-flex justify-content-center">
-                <img src="<?= base_url('/assets/sound.gif') ?>" alt="this slowpoke moves"  style="width: 200px;"/>
+                <img src="<?php //base_url('/assets/sound.gif') ?>" alt="this slowpoke moves"  style="width: 200px;"/>
             </div>
         `)
         for (const item of window.speak){
@@ -38,7 +36,7 @@
     }
     function getListJadwal(){
         $.ajax({
-            url: '<?= base_url() ?>/C_JadwalKuliah/json',
+            url: '<?php //base_url() ?>/C_JadwalKuliah/json',
             dataType: 'json',
             success: resp => {
                 window.list_jadwal = resp
@@ -124,4 +122,4 @@
         }, 3000); 
         
     })
-</script>
+</script> -->
