@@ -12,6 +12,7 @@ class M_JadwalKuliah extends CI_Model
                             ->join('mst_dosen as b', 'a.id_mst_dosen = b.id_mst_dosen')
                             ->join('mst_kelas as c', 'a.id_mst_kelas = c.id_mst_kelas')
                             ->join('mst_mata_kuliah as e', 'a.id_mst_mata_kuliah = e.id_mst_mata_kuliah')
+                            ->join('mst_semester as f', 'a.id_mst_semester = f.id_mst_semester')
                             ->where('a.flag_active', 1)
                             ->get()->result_array();
     }
