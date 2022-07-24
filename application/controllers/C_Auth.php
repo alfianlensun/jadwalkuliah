@@ -20,6 +20,7 @@ class C_Auth extends CI_Controller {
 	 */
 	public function index()
 	{
+        redirect(base_url('/C_MainMenu'));
 		$this->load->view('signin');
 	}
 
